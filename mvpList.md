@@ -7,7 +7,7 @@
 </ul>
 <h2> Database Schema </h2>
 <h3> User Table </h3>
-    <link> href='groceryListSchema.img'</link>
+    <img src='groceryListSchema.img'></img>
 <ul>
   <li> Username </li>
 <h2>API Routes</h2>
