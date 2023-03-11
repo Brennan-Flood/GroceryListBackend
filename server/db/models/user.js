@@ -10,17 +10,36 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      User.hasMany(models.List, {
+        foreignKey: 'userId',
+        onDelete: 'CASCADE'
+      });
     }
   }
   User.init({
     firstName: DataTypes.STRING,
     lastName: DataTypes.STRING,
     username: DataTypes.STRING,
-    hashedPassword: DataTypes.STRING,
+    hashedPassword: {
+      type: DataTypes.STRING.BINARY,
+      allowNull: false,
+      validate: {
+        len: [60, 60]
+      }
+    },
   }, {
     sequelize,
     modelName: 'User',
+    defaultScope: {
+      attributes: {
+        exclude: ["hashedPassword", "createdAt", "updatedAt"]
+      }
+    },
+    scope: {
+      currentUser: {
+        attributes: { exclude: ["hashedPassword", "createdAt", "updatedAt"]}
+      }
+    }
   });
   return User;
 };
