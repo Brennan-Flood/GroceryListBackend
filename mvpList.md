@@ -7,7 +7,7 @@
 </ul>
 <h2> Database Schema </h2>
 <h3> User Table </h3>
-    <img src='groceryListSchema.img'></img>
+    <img src='images/groceryListSchema.img'></img>
 <ul>
   <li> Username </li>
 <h2>API Routes</h2>
@@ -16,12 +16,8 @@
     <li>Create User</li>
     <li>Log In</li>
     <li>Sign Up User</li>
-    <li></li>
     <li>Get all lists</li>
-    <text>Re</text>
     <li>Get current items on list</li>
-    <li></li>
-    <li></li>
-    <li></li>
+
 
 </ul>
